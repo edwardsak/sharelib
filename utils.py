@@ -49,10 +49,14 @@ class DateTime():
         return datetime.datetime(datetime2.year, datetime2.month, datetime2.day)
     
     @staticmethod
-    def second_diff(interval, datetime_from, datetime_to):
+    def date_diff(interval, datetime_from, datetime_to):
         td = datetime_to - datetime_from
-        return td.total_seconds()
-    
+        
+        if interval == 'day':
+            return td.days()
+        else:
+            return td.total_seconds()
+        
 class Bool():
     @staticmethod
     def to_bool(bool_str):
