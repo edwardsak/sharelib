@@ -53,7 +53,7 @@ class DateTime():
         td = datetime_to - datetime_from
         
         if interval == 'day':
-            return td.days()
+            return td.days
         else:
             return td.total_seconds()
         
