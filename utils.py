@@ -30,7 +30,10 @@ class DateTime():
     
     @staticmethod
     def to_date_string(date2):
-        return date2.strftime('%d/%m/%Y')
+        if date2:
+            return date2.strftime('%d/%m/%Y')
+        else:
+            return ''
     
     @staticmethod
     def to_time(time_string):
@@ -38,11 +41,17 @@ class DateTime():
     
     @staticmethod
     def to_time_string(time2):
-        return time2.strftime('%H:%M')
+        if time2:
+            return time2.strftime('%H:%M')
+        else:
+            return ''
     
     @staticmethod
     def to_time_string_12(time2):
-        return time2.strftime('%I:%M %p')
+        if time2:
+            return time2.strftime('%I:%M %p')
+        else:
+            return ''
     
     @staticmethod
     def date_part(datetime2):
