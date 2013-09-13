@@ -66,6 +66,20 @@ class DateTime():
         else:
             return td.total_seconds()
         
+    @staticmethod
+    def first_day_of_month(date2):
+        if date2:
+            return datetime.datetime(date2.year, date2.month, 1)
+        else:
+            return None
+        
+    @staticmethod
+    def last_day_of_month(date2):
+        if date2:
+            return datetime.datetime(date2.year, date2.month + 1, 1) - datetime.timedelta(days=1)
+        else:
+            return None
+        
 class Bool():
     @staticmethod
     def to_bool(bool_str):
