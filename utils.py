@@ -34,6 +34,13 @@ class DateTime():
             return date2.strftime('%d/%m/%Y')
         else:
             return ''
+        
+    @staticmethod
+    def to_month_string(date2):
+        if date2:
+            return date2.strftime('%m/%Y')
+        else:
+            return ''
     
     @staticmethod
     def to_time(time_string):
